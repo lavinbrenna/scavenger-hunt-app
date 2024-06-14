@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { PUZZLES } from './puzzles';
+import Puzzle from './components/Puzzle';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {PUZZLES.map((puzzle, index) => (
+          <Route
+          key={index}
+          path={`/puzzle/${puzzle.urlText}`}
+          element={<Puzzle puzzle={puzzle} />}
+        />
+        ))}
+        <Route path="/"
+        element={
+          <div className="container">
+            <h1>Mike and Bren's Famous Amos Roasty Toasty Scavenger Escape Room Extravaganza</h1>
+            <ul>
+              {PUZZLES.map((puzzle, index) => (
+                <li key={index}>
+                  <Link to={`/puzzle/${puzzle.urlText}`}>{puzzle.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        }/>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
