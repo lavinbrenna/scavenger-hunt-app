@@ -120,17 +120,6 @@ export const PUZZLES = [
         urlText: "menu"
     },
     {
-        title: "Map between the fams",
-        answer: 1234,
-        location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "map"
-    },
-    {
         title: "Reconnecting with Family",
         answer: 1234,
         location: 'Dining Room',
@@ -151,17 +140,6 @@ export const PUZZLES = [
         resetText: "Here's how to reset",
         supplementaryItems: "Here's some supplementary items",
         urlText: "birdCall"
-    },
-    {
-        title: "Food Calulation",
-        answer: 1234,
-        location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "foodCalulation"
     },
     {
         title: "Cat Clocks",
@@ -349,28 +327,6 @@ export const PUZZLES = [
         resetText: "Here's how to reset",
         supplementaryItems: "Here's some supplementary items",
         urlText: "ceilingCutout"
-    },
-    {
-        title: 'caffeine content',
-        answer: 1234,
-        location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "caffeineContent"
-    },
-    {
-        title: 'Wedding wish tree',
-        answer: 1234,
-        location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "weddingWishTree"
     },
     {
         title: 'Plants need Sunlight',

@@ -1,4 +1,13 @@
 import React, { useState } from 'react';
+import { 
+    Button, 
+    Card, 
+    CardContent, 
+    CardHeader,
+    Container, 
+    TextField
+} from '@mui/material';
+
 
 const Puzzle = ({puzzle}) => {
     const [guess, setGuess] = useState('');
@@ -13,7 +22,7 @@ const Puzzle = ({puzzle}) => {
     };
 
     const checkAnswer = () => {
-        if (guess === puzzle.answer) {
+        if (guess === puzzle.answer.toString()) {
             setShowAnswer(true);
             setTryAgain(false);
         } else {
@@ -32,8 +41,13 @@ const Puzzle = ({puzzle}) => {
         setHintTwo(true);
     };
 
+    const hideHints = () => {
+        setHintOne(false);
+        setHintTwo(false);
+    }
+
     return(
-        <div className="container">
+        <Container>
             <h2>{puzzle.title}</h2>
             {puzzle.supplementaryItems && (
                 <div 
@@ -42,15 +56,18 @@ const Puzzle = ({puzzle}) => {
                 ></div>
             )}
             <p>{puzzle.puzzleText}</p>
-            <input 
-                type="text" 
+            <TextField 
+                id="standard-basic" 
                 value={guess} 
-                onChange={handleGuessChange} 
+                label="Check your answer" 
+                variant="standard"
                 placeholder="Check your answer" 
                 maxLength="4"
+                onChange={handleGuessChange}
             />
-            <button onClick={checkAnswer}>Submit</button>
-            <button onClick={confirmHintOne}>Hint 1</button>
+            <br/>
+            <Button variant="text" onClick={checkAnswer}>Submit</Button>
+            <Button variant="text" onClick={confirmHintOne}>Give me a hint</Button>
             {showAnswer && (
                <div className="answer">
                     <h4>{guess} is correct!</h4>
@@ -58,26 +75,28 @@ const Puzzle = ({puzzle}) => {
                 </div> 
             )}
             {showHintOne && (
-                <div className="alert alert-info">
-                <h4>Hint One:</h4>
-                <p>{puzzle.hintOne}</p>
+                <Card>
+                <CardHeader>Hint One:</CardHeader>
+                <CardContent>{puzzle.hintOne}</CardContent>
                 {!showHintTwo && (
-                    <button onClick={confirmHintTwo}>I'm REALLY stuck</button>
+                    <Button variant="text" onClick={confirmHintTwo}>I'm really stuck</Button>
+                //     <button onClick={confirmHintTwo}>I'm REALLY stuck</button>
                 )}
                 {showHintTwo && (
-                    <div className="alert alert-info mt-2">
-                    <h4>Hint Two:</h4>
-                    <p>{puzzle.hintTwo}</p>
-                    </div>
+                    <Card>
+                    <CardHeader>Hint Two:</CardHeader>
+                    <CardContent>{puzzle.hintTwo}</CardContent>
+                    </Card>
                 )}
-                </div>
+                    <Button variant="text" onClick={hideHints}>Hide Hints</Button>
+                </Card>
             )}
             {showTryAgain && (
                 <div className="tryAgain">
                     <p>Sorry, {guess} is incorrect.Try again!</p>
                 </div>
             )}
-        </div>
+        </Container>
     )
 }
 
