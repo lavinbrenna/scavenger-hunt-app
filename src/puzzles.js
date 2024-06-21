@@ -1,66 +1,62 @@
 export const PUZZLES = [
     {
-        title: 'Tutorial',
+        title: 'The Beginning Begins',
         answer: '1054',
         location: 'In front of the house',
         puzzleText: "What are the first 4 digits of our home address?",
-        hintOne: 'Look at the address of our home besides the door, the first four digits are the answer.',
+        hintOne: 'Look at the address of our home beside the door, the first four digits are the answer.',
         hintTwo: "A home is a thing people live inside, youre looking at one right now. Numbers are squiggles that represent how many of a thing.",
-        urlText: "tutorial"
+        urlText: "theBeginningBegins"
     },
     {
-        title: 'Binoculars and a Compass',
+        title: 'The Golden Compass',
         answer: '4848',
         location: 'Back porch',
         puzzleText: 'Take a look. 186 degrees SSW, or the 31st minute on a clock. 400 meters.',
         hintOne: "The degrees are in reference to a compass heading. The house behind you is due North.",
-        hintTwo: "hint two",
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "binoculars"
+        hintTwo: "You are supposed to stand in the taped off circle on the back deck and pick up the compass, point it at the heading then look through the binoculars to see a painted sign in the distance that has the answer to the riddle written on it.",
+        resetText: "Please put the binoculars down on the table on top of the instructions for focusing them, and the compass next to it.",
+        urlText: "theGoldenCompass"
 
     },
     {
-        title: 'Bar of Soap',
-        answer: '1234',
+        title: 'Behind Bars',
+        answer: '7114',
         location: 'Kitchen',
         puzzleText: "We're planning for a breakout at midnight, but the guards got ears everywhere. We've got a guy in the supply wing whose gonna send us a code for the lock on the doors, but he's gonna have to sneak it somewhere only the workers can see. The guards are on high alert, so make sure to keep your hands CLEAN. Be on the lookout",
-        hintOne: "hint1",
-        hintTwo: "hint2",
+        hintOne: "Our guy in the supply room mentioned something about a bar.",
+        hintTwo: "You gotta look at the bar of soap.",
         resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "soap"
+        urlText: "behindBars"
     },
     {
-        title: 'Photo Spot the Difference',
+        title: "You've Really Changed...",
         answer: '1234',
         location: 'Place',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "difference"
+        puzzleText: 'I think I saw this photo before elsewhere. Notice anything different? I see four. [This answer will have all of its digits going from lowest to highest, left to right]',
+        hintOne: 'One of you is currently holding the other photo this moment.',
+        hintTwo: 'Compare the photo on the wall with the photo on the front of your answer sheet. Whichever numbered squares contain something changed or different, that number goes into your final answer of 4 digits.',
+        resetText: "If you took the photo down to look closer, please make sure you hang it back up after the fact.",
+        urlText: "youveReallyChanged"
     },
     {
-        title: 'Dollhouse',
+        title: 'A Small Dilemma',
         answer: 1234,
         location: 'Living Room',
-        puzzleText: 'puzzleText',
+        puzzleText: 'Miniature Mike was getting all of the player packets ready for the guests at his Miniature Marriage, when a gust of wind came by and blew them all over the front of his house. Even worse, one of the sheets already had the answer to THIS PUZZLE written in. I guess if you can find the right sheet, the answer is yours for the taking.',
         hintOne: 'hint1',
         hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "dollhouse"
+        resetText: "Place the magnifying glass back next to the table, and if any furniture got moved or knocked over during your inspection, please make sure to put it back as best you can or get one of the game hosts to help reset it.",
+        urlText: "aSmallDilemma"
     },
     {
         title: 'Forbidden Snacks',
         answer: 1234,
         location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
+        puzzleText: "Your puzzle isn't here. You'll have to keep looking around the house. Keep an eye out for a forbidden dish, not to be enjoyed until after 10 PM, then ignore its warning and look inside.",
+        hintOne: 'There should be snacks somewhere on the main floor.',
+        hintTwo: 'There is a metal tray on the snack table in the dining room next to the kitchen. It says "Do Not Enjoy", but you can go for it',
+        resetText: "Please make sure to pull the foil back across the top of the tray so the insides remain covered to anyone else. Make sure the note on top is propped up and visible.",
         supplementaryItems: "Here's some supplementary items",
         urlText: "forbiddenSnacks"
     },
@@ -68,12 +64,12 @@ export const PUZZLES = [
         title: 'Give us a Dollar!',
         answer: 1234,
         location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
+        puzzleText: "Give us a dollar. Please. We want to go to Japan. Don't we deserve it? Go to our Registry and give us a dollar. You don't have to send the dollar now, you can even send it on Venmo later tonight when you leave the party and think 'That was a good party, we should really hang out with Mike and Brenna more often. I can't wait to get home to watch the new episode of House of the Dragon. It's not as good as Game of Thrones neccessarily, but I think it has the chance to get there at some point.' Either way, go to the registry and scroll through until you see the answer to this puzzle. (You don't really have to give us a dollar, but do click through to the site for the code!)",
+        hintOne: 'Click the link to the registry and scroll down to the option titled "code"',
+        hintTwo: "If you can't connect to the site for some reason, the answer is [ANSWER]",
         resetText: "Here's how to reset",
         supplementaryItems: "Here's some supplementary items",
-        urlText: "dollar"
+        urlText: "giveUsADollar"
     },
     {
         title: 'Group A and B Share Info',
@@ -90,21 +86,20 @@ export const PUZZLES = [
         title: 'Gift of Garf',
         answer: 1234,
         location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
-        supplementaryItems: "Here's some supplementary items",
-        urlText: "garf"
+        puzzleText: 'Place your Garfield at the shrine, in exchange, pickup the paper Garfield head and gently pull on his tongue to reveal the answer. If you forgot to bring something Garfield related, please take the markers next to you and draw Garfield in under 60 seconds, sign your name to the bottom or back, then put it in the offering box before revealing the code. This is the honor system bb.',
+        hintOne: "If you forgot to bring something Garfield related, just do a quick doodle of Garfield. Don't worry about judgement, we REALLY want some bad Garfield drawings.",
+        hintTwo: "Garfield is some kind of voluptuous sassy orange cat with an 'I don't give a fuck' attitude and an insatiable hunger for noodles in gravy. He has whiskers coming off the sides of his head, two big hard boiled eggs for eyes, and wavy black stripes on his back. You gotta know who Garfield is bud.",
+        resetText: "Please make sure the Garfield mouth closes and is placed back down on the table face up for others to reveal for themselves.",
+        urlText: "giftOfGarf"
     },
     {
-        title: 'Magic Eye',
+        title: "I think it's ... a sailboat?",
         answer: 1234,
         location: 'Dining Room',
-        puzzleText: 'puzzleText',
-        hintOne: 'hint1',
-        hintTwo: 'hint2',
-        resetText: "Here's how to reset",
+        puzzleText: 'Stare at the poster, relax your eyes and try and look past it, until the code reveals itself to you. There is only 1 number, so just repeat it 4 times for the answer.',
+        hintOne: "These can be hard or impossible for some people to do, just try for a minute or two and if you still can't, try getting up close to it.",
+        hintTwo: "Look REALLY close to it, like, go look at the frame of the poster. It's alright you couldn't see it in the poster. Don't sweat it though, not everyone's eyes can do it. Good try I bet you looked really cool doing it.",
+        resetText: "Relax your eyes and move along baby",
         supplementaryItems: "Here's some supplementary items",
         urlText: "magicEye"
     },
@@ -131,10 +126,10 @@ export const PUZZLES = [
         urlText: "reconnecting"
     },
     {
-        title: "Bird call",
+        title: "La Cage aux Folles",
         answer: 1234,
         location: 'Dining Room',
-        puzzleText: 'puzzleText',
+        puzzleText: 'Did someone let a bird into our pristine home!? We need to identify it before calling the bird police or whatever. Download this app [HERE] for identifying bird calls, take note of the species, then find its entry in the book on the shelf next to you "Neighborhood Birding 101". The answer to this question will be the two page numbers its on. (For example, if a bird was on pages 10 and 11, the answer would be "1011")',
         hintOne: 'hint1',
         hintTwo: 'hint2',
         resetText: "Here's how to reset",
