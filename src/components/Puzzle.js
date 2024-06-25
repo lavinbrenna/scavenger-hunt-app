@@ -11,6 +11,7 @@ import {
 
 const Puzzle = ({puzzle}) => {
     const [guess, setGuess] = useState('');
+    const [submittedGuess, setSubmittedGuess] = useState('');
     const [showAnswer, setShowAnswer] = useState(false);
     const [showHintOne, setHintOne] = useState(false);
     const [showHintTwo, setHintTwo] = useState(false);
@@ -22,6 +23,7 @@ const Puzzle = ({puzzle}) => {
     };
 
     const checkAnswer = () => {
+        setSubmittedGuess(guess);
         if (guess === puzzle.answer.toString()) {
             setShowAnswer(true);
             setTryAgain(false);
@@ -70,10 +72,17 @@ const Puzzle = ({puzzle}) => {
             <Button variant="text" onClick={confirmHintOne}>Give me a hint</Button>
             {showAnswer && (
                <div className="answer">
-                    <h4>{guess} is correct!</h4>
+                    <h4>{submittedGuess} is correct!</h4>
                     <p>{puzzle.resetText}</p>
                 </div> 
             )}
+
+            {showTryAgain && (
+                <div className="tryAgain">
+                    <p>Sorry, {submittedGuess} is incorrect.Try again!</p>
+                </div>
+            )}
+
             {showHintOne && (
                 <Card>
                 <CardHeader>Hint One:</CardHeader>
@@ -90,11 +99,6 @@ const Puzzle = ({puzzle}) => {
                 )}
                     <Button variant="text" onClick={hideHints}>Hide Hints</Button>
                 </Card>
-            )}
-            {showTryAgain && (
-                <div className="tryAgain">
-                    <p>Sorry, {guess} is incorrect.Try again!</p>
-                </div>
             )}
         </Container>
     )
