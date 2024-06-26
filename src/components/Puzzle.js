@@ -57,7 +57,9 @@ const Puzzle = ({puzzle}) => {
                     dangerouslySetInnerHTML={{ __html: puzzle.supplementaryItems }}
                 ></div>
             )}
-            <p>{puzzle.puzzleText}</p>
+            <div>
+                <p dangerouslySetInnerHTML={{ __html: puzzle.puzzleText }}/>
+            </div>
             <TextField 
                 id="standard-basic" 
                 value={guess} 
@@ -79,14 +81,14 @@ const Puzzle = ({puzzle}) => {
 
             {showTryAgain && (
                 <div className="tryAgain">
-                    <p>Sorry, {submittedGuess} is incorrect.Try again!</p>
+                    <p>Sorry, {submittedGuess} is incorrect. Try again!</p>
                 </div>
             )}
 
             {showHintOne && (
                 <Card>
                 <CardHeader>Hint One:</CardHeader>
-                <CardContent>{puzzle.hintOne}</CardContent>
+                <CardContent dangerouslySetInnerHTML={{ __html: puzzle.hintOne }}/>
                 {!showHintTwo && (
                     <Button variant="text" onClick={confirmHintTwo}>I'm really stuck</Button>
                 //     <button onClick={confirmHintTwo}>I'm REALLY stuck</button>
@@ -94,7 +96,7 @@ const Puzzle = ({puzzle}) => {
                 {showHintTwo && (
                     <Card>
                     <CardHeader>Hint Two:</CardHeader>
-                    <CardContent>{puzzle.hintTwo}</CardContent>
+                    <CardContent dangerouslySetInnerHTML={{ __html: puzzle.hintTwo }}/>
                     </Card>
                 )}
                     <Button variant="text" onClick={hideHints}>Hide Hints</Button>
